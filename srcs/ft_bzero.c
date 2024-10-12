@@ -1,16 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/30 13:26:01 by marvin            #+#    #+#             */
-/*   Updated: 2024/09/30 13:26:01 by marvin           ###   ########.fr       */
+/*   Created: 2024/10/12 21:35:23 by marvin            #+#    #+#             */
+/*   Updated: 2024/10/12 21:35:23 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isacii(int c)
+#include <stddef.h>
+
+void	ft_bzero(void *s, size_t n)
 {
-    return (c >= 0 && c <= 127); 
+	unsigned char *ptr = (unsigned char *)s;
+	while (n-- > 0) {
+		*ptr++ = 0;
+	}
 }

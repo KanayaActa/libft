@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/30 13:33:19 by marvin            #+#    #+#             */
-/*   Updated: 2024/09/30 13:33:19 by marvin           ###   ########.fr       */
+/*   Created: 2024/10/12 20:40:22 by marvin            #+#    #+#             */
+/*   Updated: 2024/10/12 20:40:22 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <stddef.h>
 
-size_t ft_strlen(const char *s)
+size_t  ft_strlen(const char *s)
 {
     size_t length;
 
