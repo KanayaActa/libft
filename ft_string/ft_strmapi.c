@@ -1,20 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stdlib.h                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/18 13:59:00 by marvin            #+#    #+#             */
-/*   Updated: 2024/10/18 13:59:00 by marvin           ###   ########.fr       */
+/*   Created: 2024/10/18 18:43:30 by marvin            #+#    #+#             */
+/*   Updated: 2024/10/18 18:43:30 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_STDLIB_H
-# define FT_STDLIB_H
+#include <ft_string.h>
+#include <stddef.h>
+#include <stdlib.h>
 
-int ft_atoi(const char *str);
-void *calloc(size_t nmemb, size_t size);
-char *ft_itoa(int n);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+{
+	unsigned int	i;
+	char			*result;
 
-#endif
+	i = 0;
+	result = ft_strdup(s);
+	if (result)
+	{
+		while (*(result + i))
+		{
+			*(result + i) = f(i, *(result + i));
+			i++;
+		}
+	}
+	return (result);
+}

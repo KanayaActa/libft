@@ -1,20 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stdlib.h                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/18 13:59:00 by marvin            #+#    #+#             */
-/*   Updated: 2024/10/18 13:59:00 by marvin           ###   ########.fr       */
+/*   Created: 2024/10/18 18:44:04 by marvin            #+#    #+#             */
+/*   Updated: 2024/10/18 18:44:04 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_STDLIB_H
-# define FT_STDLIB_H
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+{
+	unsigned int	i;
 
-int ft_atoi(const char *str);
-void *calloc(size_t nmemb, size_t size);
-char *ft_itoa(int n);
-
-#endif
+	i = 0;
+	while (*(s + i))
+	{
+		f(i, s + i);
+		i++;
+	}
+}

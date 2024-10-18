@@ -1,20 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stdlib.h                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/18 13:59:00 by marvin            #+#    #+#             */
-/*   Updated: 2024/10/18 13:59:00 by marvin           ###   ########.fr       */
+/*   Created: 2024/10/18 17:55:18 by marvin            #+#    #+#             */
+/*   Updated: 2024/10/18 17:55:18 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_STDLIB_H
-# define FT_STDLIB_H
+#include <ft_string.h>
+#include <stdlib.h>
 
-int ft_atoi(const char *str);
-void *calloc(size_t nmemb, size_t size);
-char *ft_itoa(int n);
+char	*ft_strjoin(char const *s1, char const *s2)
+{
+	char	*result;
+	size_t	size;
 
-#endif
+	size = ft_strlen(s1) + ft_strlen(s2) + 1;
+	result = (char *)malloc(size * sizeof(char));
+	if (!result)
+		return (NULL);
+	ft_strlcpy(result, s1, size);
+	ft_strlcat(result, s2, size);
+	return (result);
+}

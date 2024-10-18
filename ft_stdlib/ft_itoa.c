@@ -1,20 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stdlib.h                                        :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/18 13:59:00 by marvin            #+#    #+#             */
-/*   Updated: 2024/10/18 13:59:00 by marvin           ###   ########.fr       */
+/*   Created: 2024/10/18 17:10:09 by marvin            #+#    #+#             */
+/*   Updated: 2024/10/18 17:10:09 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_STDLIB_H
-# define FT_STDLIB_H
+#include <ft_string.h>
 
-int ft_atoi(const char *str);
-void *calloc(size_t nmemb, size_t size);
-char *ft_itoa(int n);
+char	*ft_itoa(int n)
+{
+	char			buf[12];
+	int				i;
+	unsigned int	m;
 
-#endif
+	i = 12;
+	buf[--i] = '\0';
+	if (n >= 0)
+		m = n;
+	else
+		m = -n;
+	while (1)
+	{
+		buf[--i] = '0' + m % 10;
+		m /= 10;
+		if (!m)
+			break ;
+	}
+	if (n < 0)
+		buf[--i] = '-';
+	return (ft_strdup(&buf[i]));
+}
