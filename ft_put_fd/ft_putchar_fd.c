@@ -1,22 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: miwasa <miwasa@student.42.fr>              +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/18 19:07:07 by miwasa            #+#    #+#             */
-/*   Updated: 2024/10/18 19:07:07 by miwasa           ###   ########.fr       */
+/*   Created: 2024/10/18 18:55:22 by marvin            #+#    #+#             */
+/*   Updated: 2024/10/18 18:55:22 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stddef.h>
 
-size_t  ft_strlen(const char *s)
+#include <unistd.h>
+
+void ft_putchar_fd(char c, int fd)
 {
-    size_t length;
-
-    length = 0;
-    while (s[length])
-        length++;
-    return (length);
+	int size;
+	size = write(fd, &c, 1);
+	(void)size;
 }

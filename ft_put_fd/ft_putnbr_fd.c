@@ -1,22 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: miwasa <miwasa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/18 19:07:07 by miwasa            #+#    #+#             */
-/*   Updated: 2024/10/18 19:07:07 by miwasa           ###   ########.fr       */
+/*   Created: 2024/10/18 19:15:14 by miwasa            #+#    #+#             */
+/*   Updated: 2024/10/18 19:15:14 by miwasa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stddef.h>
 
-size_t  ft_strlen(const char *s)
+#include <ft_put_fd.h>
+
+void	ft_putnbr_fd(int n, int fd)
 {
-    size_t length;
+	char			buf[12];
+	int				i;
+	unsigned int	m;
 
-    length = 0;
-    while (s[length])
-        length++;
-    return (length);
+	i = 12;
+	buf[--i] = '\0';
+	if (n >= 0)
+		m = n;
+	else
+		m = -n;
+	while (1)
+	{
+		buf[--i] = '0' + m % 10;
+		m /= 10;
+		if (!m)
+			break ;
+	}
+	if (n < 0)
+		buf[--i] = '-';
+	ft_putstr_fd(&buf[i], fd);
 }
