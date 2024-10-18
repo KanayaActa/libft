@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/30 13:14:50 by marvin            #+#    #+#             */
-/*   Updated: 2024/09/30 13:14:50 by marvin           ###   ########.fr       */
+/*   Created: 2024/10/18 13:15:12 by marvin            #+#    #+#             */
+/*   Updated: 2024/10/18 13:15:12 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
-#include <string.h>
+#include <stddef.h>
 
-int main(void)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-    printf("%d",isdigit(54));
-    return (0);
+	while (n--)
+		if (*(const unsigned char *)s++ == (unsigned char)c)
+			return ((void *)((const unsigned char *)s - 1));
+	return (NULL);
 }

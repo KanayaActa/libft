@@ -1,21 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_ctype.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/30 13:14:50 by marvin            #+#    #+#             */
-/*   Updated: 2024/09/30 13:14:50 by marvin           ###   ########.fr       */
+/*   Created: 2024/10/17 11:19:48 by marvin            #+#    #+#             */
+/*   Updated: 2024/10/17 11:19:48 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
-#include <string.h>
+#ifndef ft_CTYPE_H
+# define ft_CTYPE_H
 
-int main(void)
-{
-    printf("%d",isdigit(54));
-    return (0);
-}
+int	ft_isalpha(int c);
+int	ft_isdigit(int c);
+int	ft_isalnum(int c);
+int	ft_isascii(int c);
+int	ft_isprint(int c);
+int	ft_toupper(int c);
+int	ft_tolower(int c);
+
+#endif

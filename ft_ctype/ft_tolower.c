@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/30 13:14:50 by marvin            #+#    #+#             */
-/*   Updated: 2024/09/30 13:14:50 by marvin           ###   ########.fr       */
+/*   Created: 2024/10/18 11:36:38 by marvin            #+#    #+#             */
+/*   Updated: 2024/10/18 11:36:38 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
-#include <string.h>
-
-int main(void)
+int ft_tolower(int c)
 {
-    printf("%d",isdigit(54));
-    return (0);
+	if ('A' <= c && c <= 'Z')
+		return (c | 32);
+	return (c);
 }

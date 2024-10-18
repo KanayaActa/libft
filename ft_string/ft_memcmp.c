@@ -1,21 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/30 13:14:50 by marvin            #+#    #+#             */
-/*   Updated: 2024/09/30 13:14:50 by marvin           ###   ########.fr       */
+/*   Created: 2024/10/18 12:52:33 by marvin            #+#    #+#             */
+/*   Updated: 2024/10/18 12:52:33 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
-#include <string.h>
+#include <stddef.h>
 
-int main(void)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-    printf("%d",isdigit(54));
-    return (0);
+	const unsigned char	*p1;
+	const unsigned char	*p2;
+
+	p1 = (const unsigned char *)s1;
+	p2 = (const unsigned char *)s2;
+	while (n--)
+		if (*p1++ != *p2++)
+			return ((int)(*--p1 - *--p2));
+	return (0);
 }

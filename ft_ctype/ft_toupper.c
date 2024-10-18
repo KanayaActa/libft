@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/30 13:14:50 by marvin            #+#    #+#             */
-/*   Updated: 2024/09/30 13:14:50 by marvin           ###   ########.fr       */
+/*   Created: 2024/10/18 11:01:36 by marvin            #+#    #+#             */
+/*   Updated: 2024/10/18 11:01:36 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
-#include <string.h>
-
-int main(void)
+int ft_toupper(int c)
 {
-    printf("%d",isdigit(54));
-    return (0);
+	if ('a' <= c && c <= 'z')
+		return (c & ~32);
+	return (c);
 }

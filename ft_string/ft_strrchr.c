@@ -1,21 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/30 13:14:50 by marvin            #+#    #+#             */
-/*   Updated: 2024/09/30 13:14:50 by marvin           ###   ########.fr       */
+/*   Created: 2024/10/18 12:02:46 by marvin            #+#    #+#             */
+/*   Updated: 2024/10/18 12:02:46 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
-#include <string.h>
+#include <ft_string.h>
+#include <stddef.h>
 
-int main(void)
+char	*ft_strrchr(const char *s, int c)
 {
-    printf("%d",isdigit(54));
-    return (0);
+	int		len;
+
+	len = ft_strlen(s);
+	while (1)
+	{
+		if (*(s + len) == (char)c)
+			return ((char *)(s + len));
+		if (!len--)
+			break ;
+	}
+	return (NULL);
 }

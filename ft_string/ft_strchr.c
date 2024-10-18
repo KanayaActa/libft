@@ -1,21 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/30 13:14:50 by marvin            #+#    #+#             */
-/*   Updated: 2024/09/30 13:14:50 by marvin           ###   ########.fr       */
+/*   Created: 2024/10/18 11:43:15 by marvin            #+#    #+#             */
+/*   Updated: 2024/10/18 11:43:15 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
-#include <string.h>
+#include <stddef.h>
 
-int main(void)
+char *ft_strchr(const char *s, int c)
 {
-    printf("%d",isdigit(54));
-    return (0);
+	while (1)
+	{
+		if (*s == (char)c)
+			return ((char *)s);
+		if (!*s++)
+			break ;
+	}
+	return (NULL);
 }
+
