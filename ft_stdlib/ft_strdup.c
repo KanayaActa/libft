@@ -1,20 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stdlib.h                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/18 13:59:00 by marvin            #+#    #+#             */
-/*   Updated: 2024/10/18 13:59:00 by marvin           ###   ########.fr       */
+/*   Created: 2024/10/18 15:12:32 by marvin            #+#    #+#             */
+/*   Updated: 2024/10/18 15:12:32 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_STDLIB_H
-# define FT_STDLIB_H
+#include <stdlib.h>
+#include <string.h>
 
-int ft_atoi(const char *str);
-void *calloc(size_t nmemb, size_t size);
-char *strdup(const char *s);
-
-#endif
+char *ft_strdup(const char *s) {
+    size_t len;
+    char *copy;
+    
+	len = ft_strlen(s) + 1;
+	copy = malloc(len);
+    if (copy == NULL)
+        return NULL;
+    
+    return (ft_memcpy(copy, s, len));
+}
