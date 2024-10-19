@@ -3,19 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: miwasa <miwasa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/12 21:35:23 by marvin            #+#    #+#             */
-/*   Updated: 2024/10/12 21:35:23 by marvin           ###   ########.fr       */
+/*   Created: 2024/10/18 22:33:15 by miwasa            #+#    #+#             */
+/*   Updated: 2024/10/18 22:33:15 by miwasa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include <stddef.h>
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned char *ptr = (unsigned char *)s;
-	while (n-- > 0) {
+	unsigned char *ptr;
+
+	ptr = (unsigned char *)s;
+	while (n-- > 0)
+	{
 		*ptr++ = 0;
 	}
 }
