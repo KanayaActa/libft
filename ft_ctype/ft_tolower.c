@@ -10,9 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <ft_ctype.h>
+
 int	ft_tolower(int c)
 {
-	if ('A' <= c && c <= 'Z')
+	if (ft_isupper(c))
 		return (c | 32);
 	return (c);
 }
