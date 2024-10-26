@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: miwasa <miwasa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/18 11:36:38 by marvin            #+#    #+#             */
-/*   Updated: 2024/10/18 11:36:38 by marvin           ###   ########.fr       */
+/*   Created: 2024/10/26 19:12:42 by miwasa            #+#    #+#             */
+/*   Updated: 2024/10/26 19:12:42 by miwasa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
 	if ('A' <= c && c <= 'Z')
 		return (c | 32);

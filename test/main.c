@@ -14,8 +14,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int main(void)
+int	main(void)
 {
-    printf("%d",isdigit(54));
-    return (0);
+	return (0);
 }

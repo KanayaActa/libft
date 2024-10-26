@@ -12,9 +12,7 @@
 
 #include <unistd.h>
 
-void ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(char c, int fd)
 {
-	int size;
-	size = write(fd, &c, 1);
-	(void)size;
+	write(fd, &c, 1);
 }

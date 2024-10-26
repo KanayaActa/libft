@@ -13,6 +13,12 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
-
+# include "./incs/ft_ctype.h"
+# include "./incs/ft_lst.h"
+# include "./incs/ft_put_fd.h"
+# include "./incs/ft_stdlib.h"
+# include "./incs/ft_string.h"
+# include "./incs/ft_utils.h"
+# include "./incs/ft_stdio.h"
 
 #endif

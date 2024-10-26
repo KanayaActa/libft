@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: miwasa <miwasa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/30 13:26:01 by marvin            #+#    #+#             */
-/*   Updated: 2024/09/30 13:26:01 by marvin           ###   ########.fr       */
+/*   Created: 2024/10/26 19:12:12 by miwasa            #+#    #+#             */
+/*   Updated: 2024/10/26 19:12:12 by miwasa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isacii(int c)
+int	ft_isacii(int c)
 {
-    return (c >= 0 && c <= 127); 
+	return (c >= 0 && c <= 127);
 }

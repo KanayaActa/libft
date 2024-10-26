@@ -13,8 +13,9 @@
 #ifndef FT_STDLIB_H
 # define FT_STDLIB_H
 
-int ft_atoi(const char *str);
-void *calloc(size_t nmemb, size_t size);
-char *ft_itoa(int n);
+int		abs(int j);
+int		ft_atoi(const char *str);
+void	*calloc(size_t nmemb, size_t size);
+char	*ft_itoa(int n);
 
 #endif

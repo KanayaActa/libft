@@ -1,22 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: miwasa <miwasa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/18 18:58:50 by marvin            #+#    #+#             */
-/*   Updated: 2024/10/18 18:58:50 by marvin           ###   ########.fr       */
+/*   Created: 2024/10/26 19:14:03 by miwasa            #+#    #+#             */
+/*   Updated: 2024/10/26 19:14:03 by miwasa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include <ft_string.h>
+#include <unistd.h>
 
-void ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
-	int size;
-
-	size = write(fd, s, ft_strlen(s));
-	(void)size;
+	write(fd, s, ft_strlen(s));
 }
