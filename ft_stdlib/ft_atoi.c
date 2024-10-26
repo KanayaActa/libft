@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include <limits.h>
+#include <ft_ctype.h>
 
 int	ft_atoi(const char *str)
 {
@@ -19,7 +20,7 @@ int	ft_atoi(const char *str)
 
 	sign = 1;
 	nbr = 0;
-	while (*str == ' ' || (9 <= *str && *str <= 13))
+	while (ft_isspace(*str))
 		str++;
 	if (*str == '+' || *str == '-')
 	{
@@ -27,7 +28,7 @@ int	ft_atoi(const char *str)
 			sign = -1;
 		str++;
 	}
-	while ('0' <= *str && *str <= '9')
+	while (ft_isdigit(*str))
 	{
 		if (sign == 1 && nbr > (LONG_MAX - (*str - '0')) / 10)
 			return ((int)LONG_MAX);

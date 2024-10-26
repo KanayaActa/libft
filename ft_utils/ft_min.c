@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_utils.h                                         :+:      :+:    :+:   */
+/*   ft_min.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: miwasa <miwasa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/26 19:43:12 by miwasa            #+#    #+#             */
-/*   Updated: 2024/10/26 20:52:55 by miwasa           ###   ########.fr       */
+/*   Created: 2024/10/26 20:54:51 by miwasa            #+#    #+#             */
+/*   Updated: 2024/10/26 20:57:35 by miwasa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_UTILS_H
-# define FT_UTILS_H
-
-int	ft_max(int a, int b);
-int	ft_min(int a, int b);
-
-#endif
+int	ft_min(int a, int b)
+{
+	if (a > b)
+		return (b);
+	return (a);
+}
