@@ -13,6 +13,8 @@
 #ifndef FT_STDLIB_H
 # define FT_STDLIB_H
 
+# include <stddef.h>
+
 int		abs(int j);
 int		ft_atoi(const char *str);
 void	*calloc(size_t nmemb, size_t size);
