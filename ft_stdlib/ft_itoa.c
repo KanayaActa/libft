@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include <ft_string.h>
+#include <stdlib.h>
 
 char	*ft_itoa(int n)
 {
@@ -20,10 +21,7 @@ char	*ft_itoa(int n)
 
 	i = 12;
 	buf[--i] = '\0';
-	if (n >= 0)
-		m = n;
-	else
-		m = -n;
+	m = ft_abs(n);
 	while (1)
 	{
 		buf[--i] = '0' + m % 10;
