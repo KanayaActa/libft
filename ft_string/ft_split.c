@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_string.h>
-#include <ft_stdlib.h>
+#include "libft.h"
 #include <stdlib.h>
 
 static size_t	ft_split_count(const char *s, char c)
@@ -48,7 +47,7 @@ static char	**ft_nsplit(const char *s, char c, size_t len)
 		*result = (char *)s;
 		while (*s && *s != c)
 			s++;
-		*result = ft_substr(*result, 0, s - *result);
+		*result = ft_strndup(*result, s - *result);
 		if (!*result++)
 		{
 			while (_result <= result - 1)

@@ -6,11 +6,11 @@
 /*   By: miwasa <miwasa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 20:23:32 by miwasa            #+#    #+#             */
-/*   Updated: 2024/10/26 20:32:25 by miwasa           ###   ########.fr       */
+/*   Updated: 2024/11/14 17:20:19 by miwasa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_ctype.h>
+#include "libft.h"
 
 int	ft_ispunct(int c)
 {
