@@ -1,16 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stdio.h                                         :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: miwasa <miwasa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/26 19:43:09 by miwasa            #+#    #+#             */
-/*   Updated: 2024/10/26 19:44:33 by miwasa           ###   ########.fr       */
+/*   Created: 2024/11/14 17:31:28 by miwasa            #+#    #+#             */
+/*   Updated: 2024/11/14 17:32:26 by miwasa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_STDIO_H
-# define FT_STDIO_H
+#include "libft.h"
 
-#endif
+char	*ft_strcpy(char *dst, const char *src)
+{
+	return (ft_memcpy(dst, src, ft_strlen(src) + 1));
+}

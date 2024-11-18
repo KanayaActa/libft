@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_put_fd.h>
+#include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {

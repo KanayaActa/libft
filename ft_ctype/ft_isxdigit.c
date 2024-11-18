@@ -6,13 +6,13 @@
 /*   By: miwasa <miwasa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 20:31:22 by miwasa            #+#    #+#             */
-/*   Updated: 2024/10/26 20:33:33 by miwasa           ###   ########.fr       */
+/*   Updated: 2024/11/14 17:26:42 by miwasa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_ctype.h>
+#include "libft.h"
 
 int	ft_isxdigit(int c)
 {
-	return (ft_isdigit || ('A' <= c && c <= 'F') || ('a' <= c && c <= 'f'));
+	return (ft_isdigit(c) || ('A' <= c && c <= 'F') || ('a' <= c && c <= 'f'));
 }

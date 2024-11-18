@@ -6,12 +6,12 @@
 /*   By: miwasa <miwasa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 21:08:54 by miwasa            #+#    #+#             */
-/*   Updated: 2024/10/26 21:09:35 by miwasa           ###   ########.fr       */
+/*   Updated: 2024/11/14 17:33:38 by miwasa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <ft_string.h>
+#include "libft.h"
+#include <stdlib.h>
 
 char	*ft_strndup(const char *s1, size_t n)
 {
