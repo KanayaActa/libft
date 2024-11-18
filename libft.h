@@ -19,10 +19,13 @@
 
 int		ft_printf(const char *format, ...);
 
+<<<<<<< HEAD
 // === get_next_line ===
 
 char	*get_next_line(int fd);
 
+=======
+>>>>>>> origin/master
 // === ctype ===
 
 int		ft_isalnum(int c);
@@ -75,6 +78,7 @@ int		ft_abs(int j);
 int		ft_atoi(const char *str);
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_itoa(int n);
+<<<<<<< HEAD
 long	ft_strtol(const char *nptr, char **endptr, int base);
 
 typedef struct s_qsort_context {
@@ -92,6 +96,8 @@ typedef struct s_qs_vars {
 
 void	ft_qsort(void *base, size_t nmemb, size_t size, \
 				int (*compar)(const void *, const void *));
+=======
+>>>>>>> origin/master
 
 // === string ===
 
@@ -139,11 +145,14 @@ char	**ft_split(char const *s, char c);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 
+<<<<<<< HEAD
 // === strings ===
 
 int		ft_strcasecmp(const char *s1, const char *s2);
 int		ft_strncasecmp(const char *s1, const char *s2, size_t n);
 
+=======
+>>>>>>> origin/master
 // === utils ===
 
 int		ft_max(int a, int b);
