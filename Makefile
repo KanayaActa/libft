@@ -39,7 +39,7 @@ SRCS			= \
 	ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_strmapi.c \
 	ft_striteri.c ) \
 	$(addprefix $(SRCS_DIR)/ft_strings/, ft_strcasecmp.c ft_strncasecmp.c) \
-	$(addprefix $(SRCS_DIR)/ft_utils/, ft_max.c ft_min.c ft_swap.c) \
+	$(addprefix $(SRCS_DIR)/ft_utils/, ft_max.c ft_min.c ft_swap.c q_rsqrt.c) \
 	$(addprefix $(PRINTF_SRCS_DIR)/, ft_printf.c print_format.c print_type.c \
 	put_char.c put_decimal.c put_decimal_helper.c \
 	put_hex.c put_hex_helper.c put_integer.c put_percent.c \

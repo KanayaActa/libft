@@ -150,5 +150,6 @@ int		ft_strncasecmp(const char *s1, const char *s2, size_t n);
 int		ft_max(int a, int b);
 int		ft_min(int a, int b);
 void	ft_swap(int *a, int *b);
+float	q_rsqrt(float number);
 
 #endif
