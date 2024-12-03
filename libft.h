@@ -106,7 +106,7 @@ char	*ft_strcpy(char *dst, const char *src);
 char	*ft_strdup(const char *s);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strstr(const char *haystack, const char *needle);
-char	*ft_strtok(char *str, const char *delim); 
+char	*ft_strtok(char *str, const char *delim);
 
 // === strn ===
 
