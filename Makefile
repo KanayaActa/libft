@@ -37,7 +37,7 @@ SRCS			= \
 	ft_memcpy.c ft_memdup.c ft_memfrob.c ft_memmove.c ft_memchr.c \
 	ft_memset.c ft_memcmp.c ft_bzero.c ft_strlcat.c ft_strlcpy.c \
 	ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_strmapi.c \
-	ft_striteri.c ) \
+	ft_striteri.c ft_strtok.c) \
 	$(addprefix $(SRCS_DIR)/ft_strings/, ft_strcasecmp.c ft_strncasecmp.c) \
 	$(addprefix $(SRCS_DIR)/ft_utils/, ft_max.c ft_min.c ft_swap.c q_rsqrt.c) \
 	$(addprefix $(PRINTF_SRCS_DIR)/, ft_printf.c print_format.c print_type.c \
